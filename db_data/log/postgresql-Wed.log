@@ -1,0 +1,17 @@
+2026-07-08 19:07:01.022 IST [303992] LOG:  starting PostgreSQL 18.3 on x86_64-redhat-linux-gnu, compiled by gcc (GCC) 16.0.1 20260321 (Red Hat 16.0.1-0), 64-bit
+2026-07-08 19:07:01.023 IST [303992] LOG:  listening on IPv6 address "::1", port 5433
+2026-07-08 19:07:01.023 IST [303992] LOG:  listening on IPv4 address "127.0.0.1", port 5433
+2026-07-08 19:07:01.025 IST [303992] FATAL:  could not create lock file "/var/run/postgresql/.s.PGSQL.5433.lock": Permission denied
+2026-07-08 19:07:01.027 IST [303992] LOG:  database system is shut down
+2026-07-08 19:07:31.049 IST [304017] LOG:  starting PostgreSQL 18.3 on x86_64-redhat-linux-gnu, compiled by gcc (GCC) 16.0.1 20260321 (Red Hat 16.0.1-0), 64-bit
+2026-07-08 19:07:31.049 IST [304017] LOG:  listening on IPv6 address "::1", port 5433
+2026-07-08 19:07:31.049 IST [304017] LOG:  listening on IPv4 address "127.0.0.1", port 5433
+2026-07-08 19:07:31.054 IST [304017] LOG:  listening on Unix socket "/home/bappa/Rentzy/db_data/.s.PGSQL.5433"
+2026-07-08 19:07:31.061 IST [304024] LOG:  database system was shut down at 2026-07-08 19:06:59 IST
+2026-07-08 19:07:31.065 IST [304017] LOG:  database system is ready to accept connections
+2026-07-08 19:07:31.126 IST [304033] FATAL:  database "bappa" does not exist
+2026-07-08 19:07:31.128 IST [304017] LOG:  received SIGHUP, reloading configuration files
+2026-07-08 19:12:31.229 IST [304022] LOG:  checkpoint starting: time
+2026-07-08 19:12:43.363 IST [304022] LOG:  checkpoint complete: wrote 120 buffers (0.7%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=12.032 s, sync=0.094 s, total=12.135 s; sync files=73, longest=0.003 s, average=0.002 s; distance=597 kB, estimate=597 kB; lsn=0/18570B0, redo lsn=0/1857020
+2026-07-08 19:27:31.556 IST [304022] LOG:  checkpoint starting: time
+2026-07-08 19:27:32.996 IST [304022] LOG:  checkpoint complete: wrote 14 buffers (0.1%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=1.405 s, sync=0.024 s, total=1.440 s; sync files=15, longest=0.002 s, average=0.002 s; distance=5 kB, estimate=538 kB; lsn=0/1858558, redo lsn=0/1858500

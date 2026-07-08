@@ -1,0 +1,4 @@
+2026-07-08 19:07:01.022 IST [303992] LOG:  redirecting log output to logging collector process
+2026-07-08 19:07:01.022 IST [303992] HINT:  Future log output will appear in directory "log".
+2026-07-08 19:07:31.048 IST [304017] LOG:  redirecting log output to logging collector process
+2026-07-08 19:07:31.048 IST [304017] HINT:  Future log output will appear in directory "log".

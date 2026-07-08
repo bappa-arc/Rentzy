@@ -1,0 +1,11 @@
+name: rentzy_backend
+description: A Dart backend server for Rentzy.
+version: 1.0.0
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  shelf: ^1.4.1
+  shelf_router: ^1.1.4
+  postgres: ^3.1.2
+  crypto: ^3.0.3

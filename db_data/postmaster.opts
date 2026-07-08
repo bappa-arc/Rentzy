@@ -1,0 +1,1 @@
+/usr/bin/postgres "-D" "/home/bappa/Rentzy/db_data" "-p" "5433" "-k" "/home/bappa/Rentzy/db_data"
