@@ -143,8 +143,8 @@ Future<Response> _registerHandler(Request request) async {
     final password = data['password'] as String?;
     final phone = data['phone'] as String?;
     final photo = data['photo'] as String? ?? '';
-    final lat = double.tryParse(data['lat']?.toString() ?? '') ?? 37.7749;
-    final long = double.tryParse(data['long']?.toString() ?? '') ?? -122.4194;
+    final lat = double.tryParse(data['lat']?.toString() ?? '') ?? null;
+    final long = double.tryParse(data['long']?.toString() ?? '') ?? null;
 
     if (name == null || name.isEmpty || email == null || email.isEmpty || password == null || password.isEmpty) {
       return _errorResponse('Name, email, and password are required.');

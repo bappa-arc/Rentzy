@@ -465,7 +465,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   TextField(
                     controller: _searchController,
                     decoration: const InputDecoration(
-                      hintText: 'Keyword (e.g. Penthouse)',
+                      hintText: 'Keyword (e.g. 1BHK, 2BHK, 3BHK)',
                       prefixIcon: Icon(Icons.search, size: 20),
                     ),
                     onChanged: (_) => _fetchProperties(),
@@ -476,7 +476,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   TextField(
                     controller: _cityController,
                     decoration: const InputDecoration(
-                      hintText: 'City (e.g. San Francisco)',
+                      hintText: 'City (e.g. Kolkata)',
                       prefixIcon: Icon(Icons.location_city, size: 20),
                     ),
                     onChanged: (_) => _fetchProperties(),
@@ -705,8 +705,8 @@ class PropertyCard extends StatelessWidget {
                         ),
                         child: Text(
                           property.propertyType == 'rent'
-                              ? '\$${property.price.toInt().toString()}/mo'
-                              : '\$${property.price.toInt().toString()}',
+                              ? '₹${property.price.toInt().toString()}/mo'
+                              : '₹${property.price.toInt().toString()}',
                           style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
                         ),
                       ),
@@ -963,7 +963,7 @@ class _PropertyDetailScreenState extends State<PropertyDetailScreen> {
                           Row(
                             children: [
                               Text(
-                                p.propertyType == 'rent' ? '\$${p.price.toInt().toString()}/month' : '\$${p.price.toInt().toString()}',
+                                p.propertyType == 'rent' ? '₹${p.price.toInt().toString()}/month' : '₹${p.price.toInt().toString()}',
                                 style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Color(0xFF00E676)),
                               ),
                               const SizedBox(width: 16),
@@ -1006,7 +1006,7 @@ class _PropertyDetailScreenState extends State<PropertyDetailScreen> {
                             ],
                           ),
                           const SizedBox(height: 4),
-                          Text('Coordinates: Lat: ${p.lat}, Long: ${p.long}', style: const TextStyle(fontSize: 12, color: Colors.grey)),
+                          Text('Location selected from map/GPS', style: const TextStyle(fontSize: 12, color: Colors.grey)),
                           const SizedBox(height: 24),
                           const Text('Amenities', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
                           const SizedBox(height: 12),
@@ -1331,7 +1331,7 @@ class _AddPropertyScreenState extends State<AddPropertyScreen> {
                         children: [
                           Expanded(
                             child: TextFormField(
-                              decoration: const InputDecoration(labelText: 'Price (\$) *'),
+                              decoration: const InputDecoration(labelText: 'Price (₹) *'),
                               keyboardType: TextInputType.number,
                               validator: (val) => val == null || double.tryParse(val) == null ? 'Must be a valid number' : null,
                               onSaved: (val) => _price = double.tryParse(val ?? '') ?? 0.0,
@@ -1390,7 +1390,7 @@ class _AddPropertyScreenState extends State<AddPropertyScreen> {
                         }).toList(),
                       ),
                       const SizedBox(height: 24),
-                      const Text('Location Coordinates & Address', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                      const Text('Location Address', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                       const Divider(height: 24, color: Color(0xFF2D2D3E)),
                       TextFormField(
                         decoration: const InputDecoration(labelText: 'Address *'),
@@ -1404,7 +1404,7 @@ class _AddPropertyScreenState extends State<AddPropertyScreen> {
                         onSaved: (val) => _city = val ?? '',
                       ),
                       const SizedBox(height: 16),
-                      Row(
+                      /*Row(
                         children: [
                           Expanded(
                             child: TextFormField(
@@ -1426,7 +1426,7 @@ class _AddPropertyScreenState extends State<AddPropertyScreen> {
                             ),
                           ),
                         ],
-                      ),
+                      ),*/
                       const SizedBox(height: 24),
                       const Text('Property Images (URLs)', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                       const Divider(height: 24, color: Color(0xFF2D2D3E)),
